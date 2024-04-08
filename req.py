@@ -35,8 +35,8 @@ class HTMLParser:
 
             title_tag, _ = self.find_next_tag("h3")
             if title_tag is None:
-                print("Error: Title tag not found")
-                print("HTML Content:", li_tag)
+                #print("Error: Title tag not found")
+                #print("HTML Content:", li_tag)
                 continue
 
             title_start_index = title_tag.find(">") + 1
@@ -45,8 +45,8 @@ class HTMLParser:
 
             link_tag, _ = self.find_next_tag("a")
             if link_tag is None:
-                print("Error: Link tag not found")
-                print("HTML Content:", li_tag)
+                #print("Error: Link tag not found")
+                #print("HTML Content:", li_tag)
                 continue
 
             link_start_index = link_tag.find("href=\"") + len("href=\"")
