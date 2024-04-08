@@ -52,8 +52,7 @@ class HTMLParser:
             link_start_index = link_tag.find("href=\"") + len("href=\"")
             link_end_index = link_tag.find("\"", link_start_index)
             link = link_tag[link_start_index:link_end_index]
-            full_link = f"https://time.com{link}"  # Prepend 'https://time.com' to the link
-
+            full_link = f"https://time.com{link}"
             stories_data.append({"title": title, "link": full_link})
             self.position = end_index
 
